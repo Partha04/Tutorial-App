@@ -1,0 +1,163 @@
+{
+  "data": [
+    {
+      "id":"0",
+      "title":"tutorial name",
+      "rating":"3.5",
+      "img":"https://www.smartechindia.com/images/tutorial-img.png",
+      "writer":"writer name",
+      "description":"a tutorial made for you, contains all the necessary things u need",
+      "content":[
+        {
+          "id":"0",
+          "name":"topic 0",
+          "learn":[
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            }
+            ],
+          "practice":[
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            }
+            
+            ]  
+            
+        },
+        {"id":"1",
+          "name":"topic 1",
+          "learn":[
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link2",
+              "type":"web",
+              "completed":"false"
+            },
+            {
+              "link":"link3",
+              "type":"video",
+              "completed":"false"
+            }
+            ],
+          "practice":[
+            {
+              "link":"link 1",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link 2",
+              "source":"leetcode",
+              "compelted":"false"
+            },
+            {
+              "link":"link 3",
+              "source":"hackerrank",
+              "compelted":"false"
+            }
+            
+            ]  
+            
+        },
+        {
+          "id":"2",
+          "name":"topic 2",
+          "learn":[
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            }
+            ],
+          "practice":[
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            }
+            
+            ]  
+            
+        },
+        {
+          "id":"3",
+          "name":"topic 3",
+          "learn":[
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            },
+            {
+              "link":"link1",
+              "type":"video",
+              "completed":"false"
+            }
+            ],
+          "practice":[
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            },
+            {
+              "link":"link2",
+              "source":"hackerrank",
+              "compelted":"false"
+            }
+            
+            ]  
+            
+        }
+        ]
+    }   
+  ]
+}
