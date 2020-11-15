@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <div className="LandingComponent">
       <Navbar/>
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
 
       <Switch>
 

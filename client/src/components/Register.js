@@ -17,7 +17,7 @@ export default function Register() {
 
         if(userName===""||Email===""||Password==="")
         {
-          toast("Please Add All The Fields");
+          toast.warning("Please Add All The Fields");
           return;
         }
         else{
@@ -30,13 +30,13 @@ export default function Register() {
           })
           .then(response=>{
             console.log(response);
-            toast("Sucessfully registered")
+            toast.success("Sucessfully registered")
             setTimeout(2000)
             history.push("./login")   
           })
           .catch(err=>{
             console.log(err);
-            toast("Something went wrong!!")
+            toast.error("Something went wrong!!")
           })
 
           setuserName("");
@@ -50,7 +50,7 @@ export default function Register() {
 
     return (
     <div className="register d-flex justify-content-center align-items-baseline m-2">
-      <div className="form-group col-md-3 card p-3">
+      <div className="form-group col-md-4 card p-3">
         <h4 className="text-center">Register</h4>
         <label>User Name</label>
         <input

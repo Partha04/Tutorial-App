@@ -10,7 +10,7 @@ export default function Login() {
   let history = useHistory();
   const login = () => {
     if (Email === "" || Password === "") {
-      toast("Fill All The Fields");
+      toast.warning("Fill All The Fields");
     } else {
       axios
         .post("http://localhost:5000/login", {
@@ -21,10 +21,10 @@ export default function Login() {
           console.log(response);
           if (response.data.token) {
             sessionStorage.setItem("token", response.data.token);
-            toast("Logged In");
+            toast.success("Logged In");
             history.push("/tutorials");
           } else {
-            toast("Wrong Credentials");
+            toast.error("Wrong Credentials");
           }
         })
         .catch((err) => {
@@ -35,7 +35,7 @@ export default function Login() {
 
   return (
     <div className="login d-flex justify-content-center align-items-baseline m-2">
-      <div className="form-group w-25 card p-3">
+      <div className="form-group col-md-4  card p-3">
         <h4 className="text-center">Login</h4>
         <label>Email</label>
         <input

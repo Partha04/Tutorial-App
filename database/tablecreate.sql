@@ -17,6 +17,7 @@ CREATE TABLE `course` (
 	`coursedescription` varchar(100),
 	`nooftopics` INT(20) NOT NULL DEFAULT '0',
 	`createdate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`public` boolean,
 	PRIMARY KEY (`courseid`)
 );
 

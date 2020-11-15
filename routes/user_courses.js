@@ -3,7 +3,7 @@ const routes = express.Router();
 const db_config = require("../config/db_config");
 
 routes.get("/usercourse", (req, res) => {
-  db_config.query("SELECT * FROM `user_courses`", [], (err, result) => {
+  db_config.query("SELECT `ucid`, `userid`, `courseid` FROM `user_courses` WHERE `userid`=?", [req.user.userid], (err, result) => {
     if (err) throw err;
     res.json(result);
   });
