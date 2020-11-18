@@ -20,7 +20,6 @@ const AllCourseCard = ({course}) => {
             
             axios(config)
             .then(function (response) {
-              console.log(JSON.stringify(response.data));
               toast(response.data.msg);
             })
             .catch(function (error) {

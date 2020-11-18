@@ -20,7 +20,6 @@ const MyCourseCard = ({ course }) => {
 
     axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data[0]));
         setMcourse(response.data[0]);
       })
       .catch(function (error) {

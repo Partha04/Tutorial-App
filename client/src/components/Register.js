@@ -29,7 +29,6 @@ export default function Register() {
             'password':Password
           })
           .then(response=>{
-            console.log(response);
             toast.success("Sucessfully registered")
             setTimeout(2000)
             history.push("./login")   

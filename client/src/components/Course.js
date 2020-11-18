@@ -24,7 +24,6 @@ const Course = () => {
 
       axios(config)
         .then(function (response) {
-          console.log(JSON.stringify(response.data));
           setdata(response.data);
         })
         .catch(function (error) {
@@ -45,7 +44,6 @@ const Course = () => {
       
       axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
         settopicdata(response.data);
       })
       .catch(function (error) {
@@ -91,7 +89,7 @@ const Course = () => {
         </nav>
         {
           topicdata.map((content,index)=>{
-           return <Tab content={content} key={index}/>
+           return <Tab key={index} content={content} />
           })
         }
       </div>

@@ -22,26 +22,30 @@ const Tab = ({content}) => {
     
 var config1 = {
   method: 'get',
-  url: 'http://localhost:5000/learn'+content.topicid,
-  headers: { }
+  url: 'http://localhost:5000/learn/'+content.topicid,
+  headers: {
+    'Authorization': 'Bearer '+sessionStorage.getItem('token')
+   }
 };
 
 axios(config1)
 .then(function (response) {
-  console.log(JSON.stringify(response.data));
+  setlearndata(response.data)
 })
 .catch(function (error) {
   console.log(error);
 });
 var config2 = {
   method: 'get',
-  url: 'http://localhost:5000/practice'+content.topicid,
-  headers: { }
+  url: 'http://localhost:5000/practice/'+content.topicid,
+  headers: {
+    'Authorization': 'Bearer '+sessionStorage.getItem('token')
+   }
 };
 
 axios(config2)
 .then(function (response) {
-  console.log(JSON.stringify(response.data));
+  setpracticedata(response.data)
 })
 .catch(function (error) {
   console.log(error);

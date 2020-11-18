@@ -13,7 +13,6 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 
 const Landing = () => {
-  const [coursecontent, setcoursecontent] = useState();
   return (
     <div className="LandingComponent">
       <Navbar/>
@@ -36,7 +35,7 @@ const Landing = () => {
         </Route>
         
         <Route path="/mycourse">
-          <MyCourse setcoursecontent={setcoursecontent} />
+          <MyCourse/>
         </Route>
         <Route path="/dashboard">
           <Dashboard/>

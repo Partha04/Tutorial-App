@@ -18,7 +18,6 @@ export default function Login() {
           password: Password,
         })
         .then((response) => {
-          console.log(response);
           if (response.data.token) {
             sessionStorage.setItem("token", response.data.token);
             toast.success("Logged In");
