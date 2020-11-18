@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-
-const Tab = ({detail}) => {
+import React, { useEffect, useState } from "react";
+import axios from 'axios'
+const Tab = ({content}) => {
   const [Collapse, setCollapse] = useState(
     "table table-striped w-100 h-0 mx-auto coll"
   );
@@ -14,12 +14,56 @@ const Tab = ({detail}) => {
           setCollapse("table table-striped w-100 h-0 mx-auto coll")
         }
   };
+  const[learndata,setlearndata]=useState([])
+  const[practicedata,setpracticedata]=useState([])
+    console.log(content.topicid);
+  useEffect(()=>{
+
+    
+var config1 = {
+  method: 'get',
+  url: 'http://localhost:5000/learn'+content.topicid,
+  headers: { }
+};
+
+axios(config1)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+var config2 = {
+  method: 'get',
+  url: 'http://localhost:5000/practice'+content.topicid,
+  headers: { }
+};
+
+axios(config2)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+
+  },[])
+
+
+
+
+
+
+
+
+
 
   return (
     <div>
       <div className="tutorial border rounded bg-light w-75 my-1 p-2 mx-auto">
         <div className="mx-1 d-flex justify-content-between align-items-center">
-          <h6>{detail.name}</h6>
+          <h6>{content.topicname}</h6>
           <button className="btn bg-transparent  p-1 m-0" onClick={toggleColapse} >
           <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -44,7 +88,7 @@ const Tab = ({detail}) => {
 
           <tbody>
           
-         {detail.learn.map((d)=>{ return  <tr>
+         {learndata.map((d)=>{ return  <tr>
               <td className="w-50">{d.link}</td>
               <td className="w-25">{d.type}</td>
               <td className="w-25">
@@ -67,7 +111,7 @@ const Tab = ({detail}) => {
 
           </thead>
           <tbody>
-            {detail.practice.map((d)=>{
+            {practicedata.map((d)=>{
 
              return <tr>
               <td className="w-50">{d.link}</td>

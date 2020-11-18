@@ -10,7 +10,7 @@ routes.get("/lession", (req, res) => {
 });
 routes.get("/lession/:id", (req, res) => {
   db_config.query(
-    "SELECT `courseid`, `lessionname` FROM `lessons` WHERE `lessionid`=?",
+    "SELECT `lessionid`, `lessionname` FROM `lessons` WHERE `courseid`=?",
     [req.params.id],
     (err, result) => {
       if (err) throw err;

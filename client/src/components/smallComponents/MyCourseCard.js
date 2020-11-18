@@ -31,8 +31,8 @@ const MyCourseCard = ({ course }) => {
 
 
   const gotoCourse = () => {
-
-    history.push("/course")
+    
+    history.push("/course",{courseid:course.courseid})
   }
   return (
     <div className="MyCourseCard col-md-3 my-3">

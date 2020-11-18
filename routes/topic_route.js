@@ -12,7 +12,7 @@ routes.get("/topic",
 )})
 routes.get("/topic/:id",
 (req,res)=>{
-    db_config.query("SELECT `topicname`, `topicdescription`, `lessionid`, `nooflearn`, `noofpractice` FROM `topics` WHERE `topicid`=?",
+    db_config.query("SELECT `topicid`,`topicname`, `topicdescription`, `nooflearn`, `noofpractice` FROM `topics` WHERE `lessionid`=?",
     [req.params.id],(err,result)=>{
         if(err) throw err;
         res.json(result);

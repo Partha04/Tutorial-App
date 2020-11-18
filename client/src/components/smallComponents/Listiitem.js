@@ -1,13 +1,14 @@
 import React from 'react';
-const Listiitem = ({ content, setDetail}) => {
+const Listiitem = ({lessionname,lessionid,gettopics}) => {
   
     return (
         <div>
              <li className="list-group-item p-2 my-1 ">
              <button
               className=" btn bg-transparent text-secondary px-3 py-2 text-capitalize mx-auto"
-              onClick={()=>{setDetail(content)}}            >
-              {content.name}
+              onClick={()=>{gettopics(lessionid)}}
+              >
+              {lessionname}
             </button>
           </li>
         </div>

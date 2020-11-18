@@ -42,7 +42,7 @@ const Landing = () => {
           <Dashboard/>
         </Route>
         <Route path="/course" >
-          <Course coursecontent={coursecontent}/>
+          <Course/>
         </Route>
       </Switch>
     </div>

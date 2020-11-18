@@ -11,7 +11,7 @@ routes.get("/practice", (req, res) => {
 });
 routes.get("/practice/:id", (req, res) => {
   db_config.query(
-    "SELECT `topicid`, `link`, `source` FROM `practice` WHERE `practiceid`=?",
+    "SELECT `practiceid`, `link`, `source` FROM `practice` WHERE `topicid`=?",
     [req.params.id],
     (err, result) => {
       if (err) throw err;

@@ -22,7 +22,7 @@ CREATE TABLE `course` (
 );
 
 CREATE TABLE `topics` (
-	`topicid` INT NOT NULL,
+	`topicid` INT NOT NULL AUTO_INCREMENT,
 	`topicname` varchar(30) NOT NULL,
 	`topicdescription` varchar(50),
 	`lessionid` INT NOT NULL,
