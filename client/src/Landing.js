@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
@@ -7,6 +7,7 @@ import AllCourse from "./components/AllCourses";
 import MyCourse from "./components/MyCourses"
 import Dashboard from "./components/Dashboard"
 import Course from "./components/Course"
+import Create from "./components/Create"
 
 import { Route,Switch } from "react-router-dom";
 import Login from "./components/Login";
@@ -42,6 +43,9 @@ const Landing = () => {
         </Route>
         <Route path="/course" >
           <Course/>
+        </Route>
+        <Route path="/create" >
+          <Create/>
         </Route>
       </Switch>
     </div>

@@ -23,7 +23,7 @@ routes.post("/course", (req, res) => {
     "INSERT INTO `course`(`coursename`, `publisher`,`imgurl`, `coursedescription`) VALUES (?,?,?,?)",
     [
       req.body.coursename,
-      req.body.publisher,
+      req.user.userid,
       req.body.imgurl,
       req.body.coursedescription,
     ],

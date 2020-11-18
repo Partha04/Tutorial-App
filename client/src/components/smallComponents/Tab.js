@@ -93,7 +93,7 @@ axios(config2)
           <tbody>
           
          {learndata.map((d)=>{ return  <tr>
-              <td className="w-50">{d.link}</td>
+              <td className="w-50"><a href={d.link} target="_blank">{d.link}</a></td>
               <td className="w-25">{d.type}</td>
               <td className="w-25">
                 <input className="checkbox"  value={d.completed} type="checkbox" name="" id="" />
@@ -118,7 +118,7 @@ axios(config2)
             {practicedata.map((d)=>{
 
              return <tr>
-              <td className="w-50">{d.link}</td>
+              <td className="w-50"> <a href={d.link} target="_blank">{d.link}</a></td>
             <td className="w-25">{d.source}</td>
               <td className="w-25">
                 <input className="checkbox " type="checkbox" name="" id="" />

@@ -6,7 +6,7 @@ const Listiitem = ({lessionname,lessionid,gettopics}) => {
              <li className="list-group-item p-2 my-1 ">
              <button
               className=" btn bg-transparent text-secondary px-3 py-2 text-capitalize mx-auto"
-              onClick={()=>{gettopics(lessionid)}}
+              onClick={()=>{gettopics(lessionid,lessionname)}}
               >
               {lessionname}
             </button>

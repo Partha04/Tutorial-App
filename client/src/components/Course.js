@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Listitem from "./smallComponents/Listiitem";
 import Tab from "./smallComponents/Tab";
-import { useLocation } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 import axios from "axios";
 
 const Course = () => {
@@ -31,7 +31,8 @@ const Course = () => {
         });
     }, [])
 
-    const gettopics=(lessionid)=>
+    const [lessionname,setlessioname]=useState("")
+    const gettopics=(lessionid,lessionname)=>
     {
 
       var config = {
@@ -45,6 +46,7 @@ const Course = () => {
       axios(config)
       .then(function (response) {
         settopicdata(response.data);
+        setlessioname(lessionname)
       })
       .catch(function (error) {
         console.log(error);
@@ -77,13 +79,10 @@ const Course = () => {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
-              <a href="a">Home</a>
-            </li>
-            <li className="breadcrumb-item">
-              <a href="a">Library</a>
+              <Link to="/mycourse">Mycourse</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              {/* {detail.name} */}
+              {lessionname}
             </li>
           </ol>
         </nav>
