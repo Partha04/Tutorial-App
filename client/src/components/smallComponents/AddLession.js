@@ -8,6 +8,12 @@ export default function AddLession({courseid,showdata}) {
     const [lession, setLession] = useState("");
 
     const AddLesssion = () => {
+      if(lession==="")
+      {
+        toast.warning("Lession Name Empty!!!");
+        return;
+      }
+
       var data = {
         courseid: courseid,
         lessionname: lession,
