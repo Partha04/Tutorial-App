@@ -23,8 +23,8 @@ CREATE TABLE `course` (
 
 CREATE TABLE `topics` (
 	`topicid` INT NOT NULL AUTO_INCREMENT,
-	`topicname` varchar(30) NOT NULL,
-	`topicdescription` varchar(50),
+	`topicname` varchar(100) NOT NULL,
+	`topicdescription` varchar(200),
 	`lessionid` INT NOT NULL,
 	`nooflearn` INT NOT NULL,
 	`noofpractice` INT NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `topics` (
 CREATE TABLE `lessons` (
 	`lessionid` INT NOT NULL AUTO_INCREMENT,
 	`courseid` INT NOT NULL,
-	`lessionname` varchar(30) NOT NULL,
+	`lessionname` varchar(100) NOT NULL,
 	PRIMARY KEY (`lessionid`)
 );
 

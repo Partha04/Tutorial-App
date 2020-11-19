@@ -27,6 +27,9 @@ const MyCourseCard = ({ course }) => {
       });
   }, [])
 
+  const edit=()=>{
+    history.push("/create",{courseid:course.courseid})
+  }
 
 
   const gotoCourse = () => {
@@ -34,8 +37,11 @@ const MyCourseCard = ({ course }) => {
     history.push("/course",{courseid:course.courseid})
   }
   return (
-    <div className="MyCourseCard col-md-3 my-3">
+    <div className="MyCourseCard col-md-3  my-1 p-4">
       <div className="card h-100">
+        {
+          <button className="btn btn-secondary position-absolute" onClick={edit} style={{top:"0px",right:"0px"}}>Edit</button>
+        }
         <img  className="card-img-top w-100" style={{"height":"50%"}}  src={mcourse.imgurl} alt="a" />
         <div className="card-body">
           <h5 className="card-title">{mcourse.coursename}</h5>
