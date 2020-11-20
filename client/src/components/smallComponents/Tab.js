@@ -65,7 +65,7 @@ axios(config2)
 
   return (
     <div>
-      <div className="tutorial border rounded bg-light w-75 my-1 p-2 mx-auto">
+      <div className="tutorial border rounded bg-light col-md-10 my-1 p-2 mx-auto">
         <div className="mx-1 d-flex justify-content-between align-items-center">
           <h6>{content.topicname}</h6>
           <button className="btn bg-transparent  p-1 m-0" onClick={toggleColapse} >
@@ -79,9 +79,13 @@ axios(config2)
           </button>
         </div>
 
+        <div className={Collapse}>
+            <p className="p-2 text-secondary">
+            {content.topicdescription}
+            </p>
+            </div>
 
         <table className={Collapse}>
-
           <thead className="bg-secondary text-white">
             <tr>
               <td className="w-50">Learn</td>

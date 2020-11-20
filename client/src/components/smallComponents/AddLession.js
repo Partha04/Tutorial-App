@@ -35,7 +35,7 @@ export default function AddLession({courseid,showdata}) {
           setLession("");
         })
         .catch(function (error) {
-          console.log(error);
+           console.log(error);
         });
     };
     return (
@@ -43,7 +43,7 @@ export default function AddLession({courseid,showdata}) {
               <input
                 type="text"
                 class="form-control"
-                placeholder="Add lession"
+                placeholder="Lession Name"
 
                 value={lession}
 

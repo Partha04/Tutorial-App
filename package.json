@@ -1,5 +1,5 @@
 {
-  "name": "grocery",
+  "name": "tutorial",
   "version": "1.0.0",
   "description": "a simple grocery app",
   "main": "server.js",

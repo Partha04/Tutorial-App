@@ -10,7 +10,7 @@ routes.get("/course", (req, res) => {
 });
 routes.get("/course/:id", (req, res) => {
   db_config.query(
-    "SELECT  `coursename`, `publisher`,`imgurl`, `coursedescription`, `nooftopics`, `createdate`  FROM `course` WHERE `courseid`=?",
+    "SELECT `courseid`, `coursename`, `publisher`,`imgurl`, `coursedescription`, `nooftopics`, `createdate`  FROM `course` WHERE `courseid`=?",
     [req.params.id],
     (err, result) => {
       if (err) throw err;
